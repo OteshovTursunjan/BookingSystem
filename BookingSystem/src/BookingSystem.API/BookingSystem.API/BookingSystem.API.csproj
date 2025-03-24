@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -21,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BookingSystem.Application\BookingSystem.Application\BookingSystem.Application.csproj" />
     <ProjectReference Include="..\..\BookingSystem.Domain\BookingSystem.Domain\BookingSystem.Domain.csproj" />
     <ProjectReference Include="..\..\BookingSystem.Infrastucture\BookingSystem.Infrastucture\BookingSystem.Infrastucture.csproj" />
   </ItemGroup>

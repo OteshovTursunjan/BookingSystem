@@ -5,6 +5,7 @@ using BookingSystem.Infrastucture;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using BookingSystem.Application;
 
 namespace BookingSystem.API
 {
@@ -40,6 +41,9 @@ namespace BookingSystem.API
                     policy.RequireClaim(ClaimTypes.Role, "Admin"));
             });
             builder.Services.AddHttpContextAccessor();
+            var env = builder.Environment;
+
+            builder.Services.AddApplication();
 
             var app = builder.Build();
 
