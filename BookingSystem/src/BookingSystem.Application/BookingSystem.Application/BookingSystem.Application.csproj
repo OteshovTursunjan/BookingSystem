@@ -24,13 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Create\" />
-    <Folder Include="DTOs\Get\" />
-    <Folder Include="DTOs\Update\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\BookingSystem.Domain\BookingSystem.Domain\BookingSystem.Domain.csproj" />
+    <ProjectReference Include="..\..\BookingSystem.Infrastucture\BookingSystem.Infrastucture\BookingSystem.Infrastucture.csproj" />
   </ItemGroup>
 
 </Project>

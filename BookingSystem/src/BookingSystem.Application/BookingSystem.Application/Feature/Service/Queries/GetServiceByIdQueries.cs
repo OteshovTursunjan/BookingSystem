@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace BookingSystem.Application.Feature.Service.Queries
-{
-    internal class GetServiceByIdQueries
-    {
-    }
-}
+using BookingSystem.Application.DTOs.Get;
+using MediatR;
+
+namespace BookingSystem.Application.Feature.Service.Queries;
+public record GetServiceByIdQueries(Guid id) : IRequest<GetServiceModel>;
+
