@@ -8,4 +8,5 @@ public  class GetServiceModel
     public required string Description { get; set; }
     public int Price { get; set; }
     public Categories Categories { get; set; }
+    public double Rating {  get; set; }
 }

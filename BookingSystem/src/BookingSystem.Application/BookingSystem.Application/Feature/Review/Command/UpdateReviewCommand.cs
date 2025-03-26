@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace BookingSystem.Application.Feature.Review.Command
-{
-    internal class UpdateReviewCommand
-    {
-    }
-}
+using BookingSystem.Application.DTOs.Update;
+using MediatR;
+
+namespace BookingSystem.Application.Feature.Review.Command;
+
+public  record UpdateReviewCommand(UpdateReviewModel UpdateReviewModel) : IRequest<bool>;

@@ -11,6 +11,8 @@ public class Service : BaseEntity, IAuditedEntity
     public required string Description { get; set; }
     public int Price { get; set; }
     public Categories Categories { get; set; }
+    public double Rating { get; set; }
+    public int NumberOfUserWhoRate { get; set; }
     public string? CreatBy { get; set; }
     public DateTime? CreatedOn { get; set; }
 

@@ -31,6 +31,7 @@ public class GetReviewByIdHandler : IRequestHandler<GetServiceByIdQueries, GetSe
             Price = service.Price,
             Name = service.Name,
             Categories  = service.Categories,
+            Rating = service.Rating,
 
         };
         return res;

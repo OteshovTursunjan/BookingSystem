@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using BookingSystem.Application.DTOs.Create;
+using MediatR;
 
-namespace BookingSystem.Application.Feature.Review.Command
-{
-    internal class CreateReviewCommand
-    {
-    }
-}
+namespace BookingSystem.Application.Feature.Review.Command;
+
+public record CreateReviewCommand(CreateReviewModel CreateReviewModel) : IRequest<bool>;
