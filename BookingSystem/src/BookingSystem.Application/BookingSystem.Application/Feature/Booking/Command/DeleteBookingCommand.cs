@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using MediatR;
 
-namespace BookingSystem.Application.Feature.Booking.Command
-{
-    internal class DeleteBookingCommand
-    {
-    }
-}
+namespace BookingSystem.Application.Feature.Booking.Command;
+
+public record DeleteBookingCommand(Guid id) : IRequest<bool>;

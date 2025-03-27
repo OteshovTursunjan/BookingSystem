@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace BookingSystem.Application.Feature.Booking.Command
-{
-    internal class UpdateBookingCommand
-    {
-    }
-}
+using BookingSystem.Application.DTOs.Update;
+using MediatR;
+
+namespace BookingSystem.Application.Feature.Booking.Command;
+
+public record UpdateBookingCommand(UpdateBookingModel UpdateBookingModel) : IRequest<bool>;
+
