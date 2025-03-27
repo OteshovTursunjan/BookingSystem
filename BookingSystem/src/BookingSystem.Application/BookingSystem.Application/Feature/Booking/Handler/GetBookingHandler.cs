@@ -29,7 +29,8 @@ public class GetBookingHandler : IRequestHandler<GetBookingByIdQueries, GetBooki
         {
             UserId = bookin.UserId,
             ServiceId = bookin.ServiceId,
-            DateTime = bookin.DateTime,
+            BookingDate = bookin.BookingDate,
+            BookingTime = bookin.BookingTime,
             Status = bookin.BookingStatus,
         };
         return model;

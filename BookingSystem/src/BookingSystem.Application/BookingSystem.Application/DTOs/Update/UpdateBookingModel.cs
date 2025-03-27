@@ -9,6 +9,7 @@ namespace BookingSystem.Application.DTOs.Update
     public  class UpdateBookingModel
     {
        public Guid id { get; set; }
-        public DateTime NewDate { get; set; }
+        public DateTime BookingDate { get; set; }
+
     }
 }

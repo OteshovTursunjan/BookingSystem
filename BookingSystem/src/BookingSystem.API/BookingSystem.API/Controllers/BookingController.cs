@@ -24,7 +24,7 @@ public class BookingController : Controller
         return Ok(result);
     }
     [HttpPost("CreateBooking")]
-    public async Task<IActionResult> CreateBooking(CreateBookingModel createBookingModel)
+    public async Task<IActionResult> CreateBooking([FromQuery] CreateBookingModel createBookingModel)
     {
 
         if (!ModelState.IsValid)

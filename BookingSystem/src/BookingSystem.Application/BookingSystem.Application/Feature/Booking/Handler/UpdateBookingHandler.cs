@@ -22,7 +22,7 @@ public class UpdateBookingHandler : IRequestHandler<UpdateBookingCommand, bool>
             return false;
 
         }
-        booking.DateTime = request.UpdateBookingModel.NewDate;
+        booking.BookingDate = request.UpdateBookingModel.BookingDate;
         await bookingRepository.UpdateAsync(booking);
         return true;
     }
