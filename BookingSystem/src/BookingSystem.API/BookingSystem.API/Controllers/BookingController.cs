@@ -1,6 +1,7 @@
 ﻿using BookingSystem.Application.DTOs.Create;
 using BookingSystem.Application.DTOs.Update;
 using BookingSystem.Application.Feature.Booking.Command;
+using BookingSystem.Application.Feature.Booking.Handler;
 using BookingSystem.Application.Feature.Booking.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,14 @@ public class BookingController : Controller
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
         var result = await mediator.Send(new GetBookingByIdQueries(id));
+        return Ok(result);
+    }
+    [HttpGet("GetAllBooking")]
+    public async Task<IActionResult> GetAllBooking(Guid ServiceID)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        var result = await mediator.Send(new GetBookingByServiceQueries(ServiceID));
         return Ok(result);
     }
     [HttpPost("CreateBooking")]
