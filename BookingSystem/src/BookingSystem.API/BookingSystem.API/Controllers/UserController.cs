@@ -13,7 +13,7 @@ public class UserController : Controller
         _mediator = mediator;
     }
     [HttpPost("RegisterUser")]
-    public async Task<IActionResult> RegisterUser(RegisterUserModel registerUserModel)
+    public async Task<IActionResult> RegisterUser([FromBody] RegisterUserModel registerUserModel)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
@@ -22,7 +22,7 @@ public class UserController : Controller
     }
 
     [HttpPost("LoginUser")]
-    public async Task<IActionResult> LoginUser(LoginUserModel loginUserModel)
+    public async Task<IActionResult> LoginUser([FromBody] LoginUserModel loginUserModel)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);

@@ -25,7 +25,7 @@ namespace BookingSystem.API
             builder.Services.AddDbContext<DatabaseContext>(options =>
             options.UseNpgsql(builder.Configuration.GetConnectionString("ConnectionString")));
 
-         //   builder.Services.AddApplication(builder.Environment);
+      
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<DatabaseContext>()
                 .AddDefaultTokenProviders();
