@@ -30,22 +30,22 @@ namespace BookingSystem.API.Controllers
             var result = await mediator.Send(new CreateServiceCommand(createServiceModel)); 
             return Ok(result);
         }
-        [HttpPost("UpdateService")]
-        public async Task<IActionResult> UpdateService(UpdateServiceModel updateServiceModel)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-            var result = await mediator.Send(new  UpdateServiceCommand(updateServiceModel));
-            return Ok(result);
-        }
-        [HttpDelete("DeleteService")]
-        public async Task<IActionResult> DeleteService(Guid id)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-            var result = await mediator.Send(new  DeleteServiceCommand(id));
-            return Ok(result);
-        }
+        //[HttpPost("UpdateService")]
+        //public async Task<IActionResult> UpdateService(UpdateServiceModel updateServiceModel)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
+        //    var result = await mediator.Send(new  UpdateServiceCommand(updateServiceModel));
+        //    return Ok(result);
+        //}
+        //[HttpDelete("DeleteService")]
+        //public async Task<IActionResult> DeleteService(Guid id)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
+        //    var result = await mediator.Send(new  DeleteServiceCommand(id));
+        //    return Ok(result);
+        //}
 
         public IActionResult Index()
         {
