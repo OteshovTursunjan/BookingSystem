@@ -46,6 +46,14 @@ public class UserController : Controller
         var result = await _mediator.Send(new DeleteUserCommand(id));
         return Ok(result);
     }
+    [HttpDelete("DeleteUsers")]
+    public async Task<IActionResult> DeleteUsers(LoginUserModel id)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        var result = await _mediator.Send(new DeleteUserCommand(id));
+        return Ok(result);
+    }
     public IActionResult Index()
     {
         return View();
