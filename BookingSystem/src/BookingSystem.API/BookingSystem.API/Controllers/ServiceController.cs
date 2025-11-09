@@ -14,7 +14,7 @@ namespace BookingSystem.API.Controllers
         {
             this.mediator = mediator;
         }
-        [HttpGet("GetService")]
+        [HttpGet("GetServiceS")]
         public async Task<IActionResult> GetService(Guid id)
         {
             if (!ModelState.IsValid)
