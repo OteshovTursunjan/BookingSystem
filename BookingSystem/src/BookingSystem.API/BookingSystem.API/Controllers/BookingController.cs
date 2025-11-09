@@ -15,7 +15,9 @@ public class BookingController : Controller
     {
         this.mediator = mediator;
     }
-    [HttpGet("GetBooking")]
+    [HttpGet("Booking")]
+
+    
     public async Task<IActionResult> GetBooking(Guid id)
     {
 
